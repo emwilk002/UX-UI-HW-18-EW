@@ -1,40 +1,179 @@
-.inline-block {
-    display: inline-block;
-    vertical-align: top;
-}
+ /* H1-H6 styles here. Figure out if there's a better way to note these when font families differ and you want custom sizes. */ 
+ h1 {
+  font-family: 'Amatic SC', 'Open Sans';
+  font-size: 3em;
+  }
+  
+  h2 {
+      font-family: 'Amatic SC', 'Open Sans';
+      font-size: 2em;
+      }
+  h3 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.5em;
+  }
+  h4 {
+      font-family: 'Open Sans', sans-serif;
+      font-style: oblique;
+  }
+  
+  body {
+      font-family: "Open Sans", Verdana, sans-serif;
+      font-size: 1em;
+      max-width: 1080px; 
+      margin: 0 20px; 
+  }
+  /* Navigation CSS */
+    
+    header {
+      padding: 15px;
+    }
+    .logo {
+      width: 100%;
+      padding: 20%;
+  }
+    header ul {
+      float: right;
+      color: #3F5856;
+    }
+    header li {
+      display: inline-block;
+      padding: 0px 5px;
+    }
+    header p {
+      display: inline-block;
+    }
 
-.logo {
-    width: 23%;
-    padding: 1%;
-    text-align: center;
+    /* Hero Image-Banner CSS */
+ 
+  .heroGrid {
+    display:grid;
+    height:auto;
+    justify-content: start;
+    grid-template-columns:179px auto 290px;
+    grid-template-rows:20% 60% 20%;
+    column-gap: 10px;
+    row-gap: 1em;  
+    background-color:#EFE3D8;
 }
+.box1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  .box2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end:3;
+  }
 
-nav {
-   width: 73%;
-   padding: 1%; 
-}
-
-ul {align-items: center;
-    margin-left: auto;
-}
-
-.heroImg {
-    height: 600px;
-    padding: 25px;
-    text-align: top;
-}
 
 .content {
-    padding-left: 30%;
-    width: 100%;
-    height: 50%;
-    background-image: url(../images/HeroBackground.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    padding-left: 25%; 
 }
+
+.button1 {
+    background-color: #3F5856; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+/* My Skills CSS */
+.mySkills {
+  margin-top: 40px;
+}
+    .flexContainer {
+        display: flex;
+        flex-direction: row;
+        height: min-content;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .flexItem {
+        width: 33%;
+        padding: 10px 10px 10px 10px;
+        margin: 10px 10px 10px 10px;
+    }
+
+/* My Work CSS */
+.workGrid {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.workGrid img {
+width: 100%;
+max-width: 300px;
+margin: 0;
+}
+.img2 {
+padding-top:60px;   
+}
+.img3 {
+padding-top:60px;   
+}
+.buttonWork {
+  background-color: #3F5856; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.buttonWork:hover {
+  background-color: #3F5872;
+  color: white;
+}
+
+
+/* Footer CSS */ 
 footer {
-    background-color: #373738;
-    vertical-align: top;
-    height: 55px;
-    width: 73%;
+    background-color: #3F5856;
+    color: white;
+    height: 10%;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-bottom: 10px
+}
+
+@media only screen and (max-width: 800px) {
+
+.heroGrid {
+  display:grid;
+  height:auto;
+  justify-content: start;
+  grid-template-columns: auto;
+  grid-template-rows:15% 40% 35%;
+  column-gap: 10px;
+  row-gap: 1em;  
+  background-color:#EFE3D8;
+}
+.box1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.box2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end:3;
+}
+
+.heroPhoto {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+}
 }
